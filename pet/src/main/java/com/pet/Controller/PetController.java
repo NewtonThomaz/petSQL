@@ -58,7 +58,7 @@ public class PetController {
 		}
 	}
 	
-	@DeleteMapping("/")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<String> criarPet(@PathVariable Long id) {
 		boolean deleted = petService.deletePet(id);
 		if (deleted) {
